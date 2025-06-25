@@ -100,7 +100,7 @@ transitions = ["Start", "start", SubResource("AnimationNodeStateMachineTransitio
 graph_offset = Vector2(-19, -73)
 
 [node name="KO Stars" type="Node3D"]
-transform = Transform3D(-0.206231, 0, 0.455488, 0, 0.5, 0, -0.455488, 0, -0.206231, 0, 0, 0)
+transform = Transform3D(0.345579, 0, 0.361352, 0, 0.5, 0, -0.361352, 0, 0.345579, 0, 0, 0)
 
 [node name="Star 1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.4, 0, 0)

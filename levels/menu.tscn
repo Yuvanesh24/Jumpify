@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://ccxuycx0wrkww"]
+[gd_scene load_steps=35 format=3 uid="uid://ccxuycx0wrkww"]
 
 [ext_resource type="Script" uid="uid://cl3wfvxmlj36v" path="res://scripts/menu.gd" id="1_7tgs3"]
 [ext_resource type="PackedScene" uid="uid://ct4ongs00y2e8" path="res://art/models/floor.glb" id="1_kfbsc"]
@@ -28,6 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://b2taa6aak7ntw" path="res://art/ui/textures/inputs/xbox_stick_l_vertical.png" id="24_g1lh4"]
 [ext_resource type="Texture2D" uid="uid://cjlrwq6rviilq" path="res://art/ui/textures/inputs/xbox_button_a.png" id="25_6glpw"]
 [ext_resource type="Texture2D" uid="uid://cxvfr8tghov8t" path="res://art/ui/textures/inputs/keyboard_space_outline.png" id="26_27yha"]
+
+[sub_resource type="Resource" id="Resource_5rvdw"]
+metadata/__load_path__ = "res://levels/level1.tscn"
 
 [sub_resource type="Environment" id="Environment_bvm7p"]
 ambient_light_source = 2
@@ -76,7 +79,7 @@ _data = {
 [node name="Menu" type="Node3D" node_paths=PackedStringArray("play_button", "tutorial_panel", "scene_transition")]
 script = ExtResource("1_7tgs3")
 play_button = NodePath("UI/VBoxContainer/PlayButton")
-game_scene = ExtResource("2_hepnu")
+game_scene = SubResource("Resource_5rvdw")
 tutorial_panel = NodePath("UI/TutorialPanel")
 scene_transition = NodePath("Entities/GameSceneTransition")
 
