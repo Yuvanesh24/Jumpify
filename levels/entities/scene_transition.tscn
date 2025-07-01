@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cyjt21e1c6nhw"]
 
-[ext_resource type="Script" uid="uid://birv2h356fly0" path="res://scripts/scene_transition.gd" id="1_nnjgw"]
+[ext_resource type="Script" path="res://scripts/scene_transition.gd" id="1_nnjgw"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ker2a"]
 animation = &"closed"
@@ -257,10 +257,10 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_74f8q"]
 _data = {
-&"RESET": SubResource("Animation_nnjgw"),
-&"closed": SubResource("Animation_xgod8"),
-&"closing": SubResource("Animation_ker2a"),
-&"opened": SubResource("Animation_74f8q")
+"RESET": SubResource("Animation_nnjgw"),
+"closed": SubResource("Animation_xgod8"),
+"closing": SubResource("Animation_ker2a"),
+"opened": SubResource("Animation_74f8q")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ker2a"]
@@ -277,9 +277,8 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_xgod8"]
 
-[node name="SceneTransition" type="Node3D" node_paths=PackedStringArray("subviewport", "animator")]
+[node name="SceneTransition" type="Node3D" node_paths=PackedStringArray("animator")]
 script = ExtResource("1_nnjgw")
-subviewport = NodePath("SubViewportContainer/SubViewport")
 animator = NodePath("SubViewportContainer/SubViewport/CardboardBox/AnimationPlayer")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
@@ -316,7 +315,7 @@ anim_player = NodePath("../AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport/CardboardBox"]
 libraries = {
-&"": SubResource("AnimationLibrary_74f8q")
+"": SubResource("AnimationLibrary_74f8q")
 }
 autoplay = "opened"
 

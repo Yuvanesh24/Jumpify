@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c08vrtkbstupy"]
 
-[ext_resource type="Script" uid="uid://bdyepyfe8ejmp" path="res://scripts/enemy.gd" id="1_pqe15"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_pqe15"]
 [ext_resource type="AudioStream" uid="uid://cl4mjlmpxh67l" path="res://audio/sfx/hurt-2.ogg" id="3_50pm5"]
 [ext_resource type="PackedScene" uid="uid://u314npnfkxtw" path="res://art/models/box-small.glb" id="3_odhf8"]
 
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_50pm5"]
 _data = {
-&"RESET": SubResource("Animation_pqe15"),
-&"squash": SubResource("Animation_odhf8")
+"RESET": SubResource("Animation_pqe15"),
+"squash": SubResource("Animation_odhf8")
 }
 
 [node name="Enemy" type="CharacterBody3D" node_paths=PackedStringArray("collision_shape", "animation_player", "death_sound") groups=["enemy"]]
@@ -50,7 +50,6 @@ collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_pqe15")
 min_speed = 4
-max_speed = 5
 min_scale = 0.8
 collision_shape = NodePath("CollisionShape3D")
 animation_player = NodePath("AnimationPlayer")
@@ -70,7 +69,7 @@ aabb = AABB(-0.29262, 0.00587893, -0.279743, 0.585238, 0.546836, 0.570228)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_50pm5")
+"": SubResource("AnimationLibrary_50pm5")
 }
 
 [node name="Audio" type="Node" parent="."]

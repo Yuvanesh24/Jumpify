@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="First3DGame"
-run/main_scene="uid://ccxuycx0wrkww"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+run/main_scene="res://levels/game.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -31,6 +31,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="First3DGame"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

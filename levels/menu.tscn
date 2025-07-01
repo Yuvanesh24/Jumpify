@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://ccxuycx0wrkww"]
 
-[ext_resource type="Script" uid="uid://cl3wfvxmlj36v" path="res://scripts/menu.gd" id="1_7tgs3"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_7tgs3"]
 [ext_resource type="PackedScene" uid="uid://ct4ongs00y2e8" path="res://art/models/floor.glb" id="1_kfbsc"]
 [ext_resource type="FontFile" uid="uid://bnbrhy3ui4hcs" path="res://art/ui/fonts/Bungee-Regular.ttf" id="1_sq0xk"]
 [ext_resource type="PackedScene" uid="uid://diuf4ysd58lwj" path="res://art/models/character-male-e.glb" id="2_gbx6r"]
@@ -14,7 +14,7 @@
 [ext_resource type="Theme" uid="uid://cp8rplq3o7x85" path="res://art/ui/theme.tres" id="7_tbhb4"]
 [ext_resource type="PackedScene" uid="uid://cyjt21e1c6nhw" path="res://levels/entities/scene_transition.tscn" id="10_5rvdw"]
 [ext_resource type="PackedScene" uid="uid://dupw6vr5pmmt4" path="res://art/models/hat-hard.glb" id="10_w05ww"]
-[ext_resource type="Script" uid="uid://b5de622hhnufx" path="res://scripts/high_score_label.gd" id="11_spb8n"]
+[ext_resource type="Script" path="res://scripts/high_score_label.gd" id="11_spb8n"]
 [ext_resource type="PackedScene" uid="uid://b6tjvvjwk51j0" path="res://levels/entities/enemy_preview.tscn" id="15_27yha"]
 [ext_resource type="Texture2D" uid="uid://p2bcbxnsps8t" path="res://art/ui/textures/inputs/keyboard_w.png" id="15_ne4sh"]
 [ext_resource type="Texture2D" uid="uid://gluh4w8lbk47" path="res://art/ui/textures/inputs/keyboard_a.png" id="15_y2r5p"]
@@ -70,8 +70,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7tgs3"]
 _data = {
-&"RESET": SubResource("Animation_7tgs3"),
-&"title-beat": SubResource("Animation_w05ww")
+"RESET": SubResource("Animation_7tgs3"),
+"title-beat": SubResource("Animation_w05ww")
 }
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g1lh4"]
@@ -175,7 +175,7 @@ horizontal_alignment = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Entities/GameTitle"]
 libraries = {
-&"": SubResource("AnimationLibrary_7tgs3")
+"": SubResource("AnimationLibrary_7tgs3")
 }
 autoplay = "title-beat"
 

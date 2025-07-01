@@ -1,10 +1,11 @@
 extends CharacterBody3D
 
 @export_group("Movement and size")
-@export var min_speed = 5
-@export var max_speed = 9
+@export var min_speed = 3
+@export var max_speed = 5
 @export var min_scale = 1.0
 @export var max_scale = 3.0
+
 
 @export_group("Animation")
 @export var collision_shape: CollisionShape3D

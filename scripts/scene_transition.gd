@@ -3,7 +3,7 @@ class_name SceneTransition
 
 @export_group("References")
 @export var next_scene: PackedScene
-@export var subviewport: SubViewport
+#@export var subviewport: SubViewport
 
 @export_group("Animation")
 @export var animator: AnimationPlayer
@@ -13,9 +13,9 @@ class_name SceneTransition
 var transitioning: bool = false
 
 func _ready() -> void:
-  subviewport.size = get_viewport().get_visible_rect().size
-  get_viewport().connect("size_changed", _on_window_resized)
-  _on_window_resized()
+  #subviewport.size = get_viewport().get_visible_rect().size
+  #get_viewport().connect("size_changed", _on_window_resized)
+  #_on_window_resized()
 
   animator.speed_scale = playback_speed
 
@@ -50,5 +50,5 @@ func transition() -> void:
 func _transition_to_new_scene() -> void:
   next_scene.instantiate()
 
-func _on_window_resized() -> void:
-  subviewport.size = get_viewport().get_visible_rect().size
+#func _on_window_resized() -> void:
+  #subviewport.size = get_viewport().get_visible_rect().size

@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://doxjbwhfys3ot"]
 
 [ext_resource type="PackedScene" uid="uid://diuf4ysd58lwj" path="res://art/models/character-male-e.glb" id="1_mibvx"]
-[ext_resource type="Script" uid="uid://bghl6tcpon1yn" path="res://scripts/player.gd" id="1_vfbym"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_vfbym"]
 [ext_resource type="PackedScene" uid="uid://de00m6ji8pugo" path="res://levels/entities/ko-stars.tscn" id="2_c6rqd"]
 [ext_resource type="PackedScene" uid="uid://cxm3jwu56bcev" path="res://levels/entities/smoke_particles.tscn" id="3_38v7o"]
 [ext_resource type="PackedScene" uid="uid://dupw6vr5pmmt4" path="res://art/models/hat-hard.glb" id="3_ojwqx"]
@@ -106,14 +106,14 @@ smoke_particles = ExtResource("3_38v7o")
 [node name="Character" parent="Pivot" instance=ExtResource("1_mibvx")]
 
 [node name="Skeleton3D" parent="Pivot/Character/character-male-e" index="0"]
-bones/1/rotation = Quaternion(-0.450276, 0.376503, 0.217374, 0.779901)
-bones/2/rotation = Quaternion(-0.344626, -0.401655, -0.166371, 0.832002)
-bones/4/rotation = Quaternion(-0.0585641, 0.250813, 0.219897, 0.940908)
-bones/5/rotation = Quaternion(-0.0585641, -0.250813, -0.219897, 0.940908)
-bones/6/rotation = Quaternion(0.0187967, 0, 0, 0.999823)
+bones/1/rotation = Quaternion(-0.460961, 0.335479, 0.193689, 0.798407)
+bones/2/rotation = Quaternion(-0.352804, -0.35789, -0.148243, 0.851744)
+bones/4/rotation = Quaternion(-0.0343664, 0.256392, 0.128411, 0.957389)
+bones/5/rotation = Quaternion(-0.0343664, -0.256392, -0.128411, 0.957389)
+bones/6/rotation = Quaternion(0.042492, 0, 0, 0.999097)
 
 [node name="HeadAttachment" type="BoneAttachment3D" parent="Pivot/Character"]
-transform = Transform3D(1, 0, 0, 0, 0.999293, -0.0375867, 0, 0.0375867, 0.999293, 1.81969e-09, 0.34325, -0.00236122)
+transform = Transform3D(1, 0, 0, 0, 0.996389, -0.0849073, 0, 0.0849073, 0.996389, 1.81969e-09, 0.34325, -0.00236122)
 bone_name = "head"
 bone_idx = 6
 use_external_skeleton = true

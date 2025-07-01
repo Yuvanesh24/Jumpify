@@ -29,4 +29,4 @@ func _process(delta):
 
 # Call this method to trigger the shake
 func _shake():
-  shake_time = shake_duration
+    shake_time = shake_duration

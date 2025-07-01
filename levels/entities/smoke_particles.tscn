@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cxm3jwu56bcev"]
 
-[ext_resource type="Script" uid="uid://62g5a102kry7" path="res://scripts/smoke_particles.gd" id="1_0snfp"]
+[ext_resource type="Script" path="res://scripts/smoke_particles.gd" id="1_0snfp"]
 
 [sub_resource type="Gradient" id="Gradient_b3wg6"]
 offsets = PackedFloat32Array(0.640845, 0.922535)
@@ -22,7 +22,6 @@ emission_ring_axis = Vector3(0, 90, 1)
 emission_ring_height = 0.0
 emission_ring_radius = 0.1
 emission_ring_inner_radius = 0.0
-emission_ring_cone_angle = 90.0
 radial_velocity_min = 1.49998
 radial_velocity_max = 1.99998
 gravity = Vector3(0, 1, 0)

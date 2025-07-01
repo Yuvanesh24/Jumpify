@@ -1,10 +1,10 @@
 [gd_scene load_steps=26 format=3 uid="uid://581fkfncav4r"]
 
-[ext_resource type="Script" uid="uid://cwc7tyd8hlwkf" path="res://scripts/main.gd" id="1_yyd14"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_yyd14"]
 [ext_resource type="PackedScene" uid="uid://c08vrtkbstupy" path="res://levels/entities/enemy.tscn" id="2_6f163"]
 [ext_resource type="PackedScene" uid="uid://doxjbwhfys3ot" path="res://levels/entities/player.tscn" id="3_p0d6h"]
 [ext_resource type="PackedScene" uid="uid://c8s4ao5i71dfq" path="res://art/models/floor-large.glb" id="4_jkag2"]
-[ext_resource type="Script" uid="uid://b6pasd7cw6qqt" path="res://scripts/camera_shake.gd" id="5_aumgp"]
+[ext_resource type="Script" path="res://scripts/camera_shake.gd" id="5_aumgp"]
 [ext_resource type="PackedScene" uid="uid://d3m5ivu4q1nnd" path="res://art/models/structure-doorway-wide.glb" id="5_ol2u7"]
 [ext_resource type="PackedScene" uid="uid://b7tk7vsuo4mij" path="res://art/models/structure-corner-inner.glb" id="6_aumgp"]
 [ext_resource type="PackedScene" uid="uid://vd3he2p4uukm" path="res://art/models/structure-wall.glb" id="7_0u5wd"]
@@ -13,9 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://u314npnfkxtw" path="res://art/models/box-small.glb" id="10_si8kf"]
 [ext_resource type="PackedScene" uid="uid://6sa0jkg1dpcd" path="res://art/models/box-long.glb" id="11_mgpep"]
 [ext_resource type="Theme" uid="uid://cp8rplq3o7x85" path="res://art/ui/theme.tres" id="12_pb6kn"]
-[ext_resource type="Script" uid="uid://mo0xbedty1be" path="res://scripts/score_label.gd" id="13_kw56w"]
-[ext_resource type="Script" uid="uid://b5de622hhnufx" path="res://scripts/high_score_label.gd" id="14_6f163"]
-[ext_resource type="Script" uid="uid://brhqxj7gggoux" path="res://scripts/new_record_label.gd" id="16_jkag2"]
+[ext_resource type="Script" path="res://scripts/score_label.gd" id="13_kw56w"]
+[ext_resource type="Script" path="res://scripts/high_score_label.gd" id="14_6f163"]
+[ext_resource type="Script" path="res://scripts/new_record_label.gd" id="16_jkag2"]
 
 [sub_resource type="Environment" id="Environment_m1504"]
 background_mode = 1
@@ -76,8 +76,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ol2u7"]
 _data = {
-&"RESET": SubResource("Animation_jkag2"),
-&"pulse": SubResource("Animation_p0d6h")
+"RESET": SubResource("Animation_jkag2"),
+"pulse": SubResource("Animation_p0d6h")
 }
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_location", "player", "enemyTimer", "scoreLabel", "retryRectangle")]
@@ -146,7 +146,7 @@ curve = SubResource("Curve3D_wdj6m")
 metadata/_edit_group_ = true
 
 [node name="SpawnLocation" type="PathFollow3D" parent="Entities/Enemies/SpawnPath"]
-transform = Transform3D(-0.0295619, 0, 0.999543, 0, 0.999998, 0, -0.999541, 0, -0.0295619, 2.47185, -0.950095, -4.87356)
+transform = Transform3D(-0.0295617, 0, 0.999543, 0, 0.999998, 0, -0.999541, 0, -0.0295618, 2.47185, -0.950095, -4.87356)
 
 [node name="Level" type="Node3D" parent="."]
 
@@ -157,7 +157,6 @@ collision_layer = 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Back wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017662, 0.21875, 0.149658)
 shape = SubResource("BoxShape3D_1fput")
-debug_fill = false
 
 [node name="floor-large" parent="Level" groups=["floor"] instance=ExtResource("4_jkag2")]
 transform = Transform3D(6.11215, 0, 0, 0, 1.01405, 0, 0, 0, 6.43752, 0, -1, 0)
@@ -180,7 +179,6 @@ collision_layer = 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/structure-doorway-wide2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00744633, 1.43542, 0.710464)
 shape = SubResource("BoxShape3D_xdh4e")
-debug_fill = false
 
 [node name="structure-corner-inner2" parent="Level" instance=ExtResource("6_aumgp")]
 transform = Transform3D(-4.38264e-08, 0, 0.60448, 0, 1.00263, 0, -1.00263, 0, -2.64227e-08, 3.436, -1, -1.763)
@@ -198,7 +196,6 @@ collision_layer = 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/structure-wall2/StaticBody3D2"]
 transform = Transform3D(1, 0, -2.0691e-11, 0, 1, 0, 0, 0, 1, -3.38004, 1.20833, -0.263306)
 shape = SubResource("BoxShape3D_c7dyn")
-debug_fill = false
 
 [node name="structure-wall3" parent="Level" instance=ExtResource("7_0u5wd")]
 transform = Transform3D(-4.32567e-07, 0, -1, 0, 1, 0, 9.89597, 0, -4.37114e-08, -3.17071, -0.988235, 1.9575)
@@ -210,7 +207,6 @@ collision_layer = 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/structure-wall3/StaticBody3D3"]
 transform = Transform3D(1, 0, -2.34763e-11, 0, 1, 0, 0, 0, 1, -3.51221, 1.20026, -0.263306)
 shape = SubResource("BoxShape3D_c7dyn")
-debug_fill = false
 
 [node name="door-wide-half2" parent="Level" instance=ExtResource("8_fbo34")]
 transform = Transform3D(-3.14561, 0, -8.74228e-08, 0, 1, 0, 2.74998e-07, 0, -1, 0, -1, -1.84997)
@@ -415,7 +411,7 @@ script = ExtResource("16_jkag2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Retry/NewRecordLabel"]
 libraries = {
-&"": SubResource("AnimationLibrary_ol2u7")
+"": SubResource("AnimationLibrary_ol2u7")
 }
 autoplay = "pulse"
 
